@@ -1,6 +1,6 @@
 import image from "../assets/image.png";
 import { FaStar } from "react-icons/fa6";
-
+import { IoIosHeartEmpty } from "react-icons/io";
 function Cards() {
   const cardList = [
     {
@@ -108,20 +108,22 @@ function Cards() {
       {/* 아래는 예시 코드입니다 */}
       <div class="grid grid-cols-4 gap-x-7 gap-y-11">
         {cardList.map((cd) => (
-          <div id={cd.id}>
+          <div id={cd.id} className="cursor-pointer">
             <div
               className="flex flex-col justify-between bg-cover bg-center w-full aspect-[1/1] rounded-3xl p-4"
               style={{ backgroundImage: `url(${cd.image})` }}
             >
-              <div className="flex justify-between w-full ">
+              <div className="flex justify-between w-full items-center">
+                {cd.guest != "" ? (
+                  <div className="bg-white py-1.5 px-3 rounded-full font-medium h-10 flex items-center justify-center shadow-lg">
+                    {cd.guest}
+                  </div>
+                ) : (
+                  <div className="h-10"></div>
+                )}
                 <div>
-                  {cd.guest != "" ? (
-                    <div>{cd.guest}</div>
-                  ) : (
-                    <div>{cd.guest}</div>
-                  )}
+                  <IoIosHeartEmpty className="h-7 w-7 text-white  transition-all duration-200 hover:scale-110 " />
                 </div>
-                <div>heart</div>
               </div>
               <div className="flex space-x-2 justify-center items-center">
                 <div className="w-2 h-2 bg-white rounded-full"></div>
