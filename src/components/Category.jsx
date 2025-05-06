@@ -12,16 +12,28 @@ const categoryList = [
   { id: 11, category: "초소형 주택" },
   { id: 12, category: "호수 근처" },
   { id: 13, category: "키즈" },
-  { id: 14, category: ">" },
-  { id: 15, category: "필터" },
 ];
 
 function Category() {
   return (
-    <div>
-      {categoryList.map((category) => (
-        <div id={category.id}>{category.category}</div>
-      ))}
+    <div className="flex items-center justify-between px-6 py-2">
+      {/* 카테고리 */}
+      <div className="flex items-center space-x-10 text-gray-700">
+        {categoryList.map((category) => (
+          <div id={category.id} className="text-sm">
+            {category.category}
+          </div>
+        ))}
+      </div>
+      {/* 더보기, 필터*/}
+      <div className="flex items-center space-x-6">
+        <div className="px-3 py-1 border border-gray-400 text-md rounded-full">
+          {">"}
+        </div>
+        <div className="px-3 py-1.5 border border-gray-400 text-sm rounded-xl">
+          필터
+        </div>
+      </div>
     </div>
   );
 }
