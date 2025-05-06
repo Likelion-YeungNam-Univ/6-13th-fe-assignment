@@ -1,24 +1,32 @@
-function Cards() {
-  const printBox = () => {
-    const boxes = Array.from({ length: 8 }, (_, i) => (
-      <div key={i} className="bg-blue-400">
-        0{i + 1}
-      </div>
-    ));
-    return boxes;
-  };
+import sea from "../assets/sea.png";
 
-  return (
-    // 세션 때 구조 분석한 것처럼 컴포넌트 구조 분석하여(이름도 지어주세요) pr에 사진 첨부 꼭 해주세요.
-    <div>
-      {/* grid 클래스 활용해서 컴포넌트 만들기 */}
-      {/* 아래는 예시 코드입니다 */}
-      <div>Cards</div>
-      <div class="grid grid-cols-4 gap-4">
-        {printBox()}
-      </div>
-    </div>
-  );
+function Cards() {
+	const printBox = () => {
+		const boxes = Array.from({ length: 8 }, (_, i) => (
+			<div key={i}>
+				{/* 카드 이미지 */}
+				<img src={sea} className="w-full h-[400px] object-cover rounded-xl" />
+
+				{/* 카드 설명 */}
+				<div className="mt-3">
+					<div className="flex justify-between">
+						<h3>영남대학교</h3>
+						<span>⭐ 4.99</span>
+					</div>
+					<p>1,000km 거리</p>
+					<p className="text-gray-500">6월 1일 ~ 30일</p>
+					<p className="text-gray-500">게스트 한마디 "멋사화이팅”</p>
+					<p>₩999,999,999/박</p>
+				</div>
+			</div>
+		));
+		return boxes;
+	};
+
+	return (
+		// box 컴포넌트들 추가.
+		<div className="grid grid-cols-4 gap-4 ml-20 mr-20">{printBox()}</div>
+	);
 }
 
 export default Cards;
