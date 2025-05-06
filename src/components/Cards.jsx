@@ -24,7 +24,7 @@ function Cards() {
 	};
 
 	return (
-		// box 컴포넌트들 추가
+		// box 컴포넌트들 추가.
 		<div className="grid grid-cols-4 gap-4 ml-20 mr-20">{printBox()}</div>
 	);
 }
