@@ -5,7 +5,7 @@ const CardList = [
   {
     id: 1,
     image: image,
-    title: "게스트 선호",
+    prefer: "게스트 선호",
     location: "한국 Ongryong-myeon, Gwangyan...",
     rating: 4.97,
     distance: "134km 거리",
@@ -34,7 +34,7 @@ const CardList = [
   {
     id: 4,
     image: image,
-    title: "게스트 선호",
+    prefer: "게스트 선호",
     location: "한국 Gyo-dong, Gyeongju",
     rating: 4.91,
     distance: "43km 거리",
@@ -45,7 +45,7 @@ const CardList = [
   {
     id: 5,
     image: image,
-    title: "게스트 선호",
+    prefer: "게스트 선호",
     location: "한국 Ongryong-myeon, Gwangyan...",
     rating: 4.97,
     distance: "134km 거리",
@@ -56,7 +56,7 @@ const CardList = [
   {
     id: 6,
     image: image,
-    title: "게스트 선호",
+    prefer: "게스트 선호",
     location: "한국 Bonghwa-eup, Bonghwa-gun",
     rating: 4.92,
     distance: "120km 거리",
@@ -66,7 +66,7 @@ const CardList = [
   {
     id: 7,
     image: image,
-    title: "게스트 선호",
+    prefer: "게스트 선호",
     location: "한국 Pungcheon-myeon, Andong",
     rating: 4.87,
     distance: "82km 거리",
@@ -99,7 +99,7 @@ function Cards() {
     <div className="flex flex-wrap justify-center gap-4 p-4">
       {CardList.map((card) => (
         <div
-          id={card.id}
+          key={card.id}
           className="w-80 bg-white rounded-xl overflow-hidden transition"
         >
           <div className="relative">
@@ -108,9 +108,9 @@ function Cards() {
               src={card.image}
               alt="숙소이미지"
             />
-            {card.title && (
+            {card.prefer && (
               <div className="absolute top-2 left-2 bg-white text-black text-xs px-3 py-1 rounded-full">
-                {card.title}
+                {card.prefer}
               </div>
             )}
             <div className="absolute top-2 right-2 text-black text-xl">♥</div>
