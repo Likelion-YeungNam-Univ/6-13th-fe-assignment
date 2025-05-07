@@ -27,7 +27,6 @@ function Category() {
           <button className="w-8 h-8 m-2 flex items-center justify-center border border-gray-300 rounded-full text-gray-600">
             &gt;
           </button>
-
           <button className="h-8 flex items-center border border-gray-300 rounded-xl px-6 py-6 text-gray-600">
             필터
           </button>
