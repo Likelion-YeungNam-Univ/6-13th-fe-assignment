@@ -16,22 +16,24 @@ const categoryList = [
 
 function Category() {
   return (
-    <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
-      {/* 카테고리 */}
-      <div className="flex items-center space-x-10 text-gray-700">
-        {categoryList.map((category) => (
-          <div id={category.id} className="text-sm">
-            {category.category}
-          </div>
-        ))}
-      </div>
-      {/* 더보기, 필터*/}
-      <div className="flex items-center space-x-6">
-        <div className="px-3 py-2 border border-gray-400 text-md rounded-full">
-          {">"}
+    <div className="w-full border-b border-gray-200 py-4">
+      <div className="flex items-center justify-between ml-24 mr-24">
+        {/* 카테고리 */}
+        <div className="flex items-center space-x-7 text-gray-700">
+          {categoryList.map((category) => (
+            <div id={category.id} className="text-sm">
+              {category.category}
+            </div>
+          ))}
         </div>
-        <div className="px-3 py-1.5 border border-gray-400 text-sm rounded-xl">
-          필터
+        {/* 더보기, 필터*/}
+        <div className="flex items-center space-x-4">
+          <div className="px-3 py-1 border border-gray-400 text-md rounded-full">
+            {">"}
+          </div>
+          <div className="px-3 py-1.5 border border-gray-400 text-sm rounded-xl">
+            필터
+          </div>
         </div>
       </div>
     </div>
