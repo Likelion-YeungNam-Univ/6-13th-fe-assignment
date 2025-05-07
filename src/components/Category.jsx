@@ -12,8 +12,6 @@ const categoryList = [
   {id:11, category: "초소형 주택"},
   {id:12, category: "호수 근처"},
   {id:13, category: "키즈"},
-  {id:14, category: ">"},
-  {id:15, category: "필터"}
 ]
 
 
@@ -22,11 +20,19 @@ function Category() {
   return (
     // 아이콘은 신경쓰지 않고 카테고리명만 사용해서 구현해주세요.
     // 아이콘도 사용하고 싶으시면 모든 코드 완성 후 마지막에 시간 남을 때 추가하시는 걸 추천드립니다.
-    <div className="flex justify-center overflow-x-auto whitespace-nowrap border-b border-gray-200 py-4 px-2 gap-4">
-    {categoryList.map(category => (
-        <div id={category.id} className="text-sm font-medium text-center px-1 py-1 cursor-pointer hover:text-red-400">{category.category}</div>
-    ))}
-  </div>
+    <div className="flex flex-row items-center justify-center mb-5 border-b border-gray-200">
+      <div className="flex justify-center overflow-x-auto py-4 px-2 gap-4">
+      {categoryList.map(category => (
+          <div id={category.id} className="text-sm font-medium text-center px-1 py-1 cursor-pointer hover:bg-red-400 hover:rounded-2xl hover:text-white">{category.category}</div>
+      ))}
+      </div>
+      <button className="flex justify-center items-center w-8 h-8 mr-4 border border-gray-200 rounded-full text-base hover:bg-gray-300">
+        {">"}
+      </button>
+      <button className="flex justify-center items-center w-20 h-10 bg-white border border-gray-200 rounded-xl text-sm hover:bg-gray-300">
+        {"필터"}
+      </button>
+    </div>
   );
 }
 

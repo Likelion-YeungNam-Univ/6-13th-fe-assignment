@@ -21,7 +21,7 @@ const cardData = [
 function Cards() {
   const printBox = () => {
     return cardData.map((card, i) => (
-      <div key={i} className="bg-white rounded-xl overflow-hidden space-y-2">
+      <div key={i} className="bg-white rounded-xl overflow-hidden space-y-2 mt-4">
         {/* 카드 사진 */}
         <div className="relative">
           <img src={card.pic} alt={card.name} className="w-full h-60 object-cover rounded-xl" />
@@ -32,7 +32,7 @@ function Cards() {
             </div>
           )}
 
-          <button className="absolute top-2 right-2 p-1 rounded-full">
+          <button className="absolute top-2 right-2 p-1 rounded-full hover:bg-red-400 hover : text-white">
           ♡
           </button>
         </div>
