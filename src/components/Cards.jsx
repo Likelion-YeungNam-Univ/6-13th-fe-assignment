@@ -7,6 +7,8 @@ import thumbnail6 from "../assets/Gyeongju.png";
 import thumbnail7 from "../assets/Hamyang.png";
 import thumbnail8 from "../assets/Jinju.png";
 
+const like = "https://img.icons8.com/?size=100&id=87&format=png&color=ffffff";
+
 const cardInfo = [
   {
     id: 1,
@@ -113,11 +115,14 @@ function Cards() {
                 게스트 선호
               </span>
             )}
+            <button className="absolute top-4 right-8">
+              <img src={like} className="w-7 h-7"></img>
+            </button>
           </div>
         </div>
         <div className="mb-1 flex justify-between">
           <div className="font-bold">한국 {card.location}</div>
-          <div className="font-bold mr-2">{card.rate}</div>
+          <div className="font-bold mr-2">★ {card.rate}</div>
         </div>
         <div className="text-gray-500 text-sm">
           <div>{card.dist}km 거리</div>
