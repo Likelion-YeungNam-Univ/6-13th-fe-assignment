@@ -22,9 +22,9 @@ function Category() {
   return (
     // 아이콘은 신경쓰지 않고 카테고리명만 사용해서 구현해주세요.
     // 아이콘도 사용하고 싶으시면 모든 코드 완성 후 마지막에 시간 남을 때 추가하시는 걸 추천드립니다.
-    <div>
+    <div className="flex justify-center overflow-x-auto whitespace-nowrap border-b border-gray-200 py-4 px-2 gap-4">
     {categoryList.map(category => (
-        <div id={category.id}>{category.category}</div>
+        <div id={category.id} className="text-sm font-medium text-center px-1 py-1 cursor-pointer hover:text-red-400">{category.category}</div>
     ))}
   </div>
   );
