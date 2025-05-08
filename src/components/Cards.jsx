@@ -1,6 +1,7 @@
 import photo from "../assets/photo.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const cardList = [
   {
@@ -88,21 +89,30 @@ function Cards() {
             {/* main */}
             <div className="relative">
               <img className="rounded-xl m-2" src={form.photo} />
-              <div className="absolute top-2 right-5 z-20">
+              <div className="absolute top-3 right-5 z-20">
                 <FontAwesomeIcon icon={faHeart} className="text-white" />
               </div>
+              <button
+                onClick={() => {}}
+                className="absolute top-3 left-5 z-20 bg-white px-2 py-2 rounded-full text-sm"
+              >
+                게스트 선호
+              </button>
             </div>
             <div className="flex justify-between m-3">
               {/*중간*/}
               <div className="flex flex-col space-y-1">
-                <div>{form.title}</div>
-                <div>{form.distance}</div>
-                <div>{form.date}</div>
-                <div>{form.comment}</div>
+                <div className="font-bold">{form.title}</div>
+                <div className="text-gray-500">{form.distance}</div>
+                <div className="text-gray-500">{form.date}</div>
+                <div className="text-gray-500">{form.comment}</div>
                 <div>{form.money}</div>
               </div>
               {/*오른쪽*/}
-              <div className="font-semibold">{form.point}</div>
+              <div className="font-semibold flex space-x-1 leading-none">
+                <FontAwesomeIcon icon={faStar} className="relative top-[1px]" />
+                <span className="text-sm">{form.point}</span>
+              </div>
             </div>
           </div>
         ))}

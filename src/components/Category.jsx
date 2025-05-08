@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faList } from "@fortawesome/free-solid-svg-icons";
+
 const categoryList = [
   { id: 1, category: "한옥" },
   { id: 2, category: "컬처 아이콘" },
@@ -13,7 +16,6 @@ const categoryList = [
   { id: 12, category: "호수 근처" },
   { id: 13, category: "키즈" },
 ];
-const handle = () => {};
 
 function Category() {
   return (
@@ -23,18 +25,21 @@ function Category() {
           {category.category}
         </div>
       ))}
-      <button
-        onClick={() => {}}
-        className="bg-white border border-gray-300 px-3 rounded-full text"
-      >
-        &gt;
-      </button>
-      <button
-        onClick={() => {}}
-        className="bg-white border border-gray-300 px-4 py-2 rounded-lg text-sm"
-      >
-        필터
-      </button>
+      <div className="flex items-center space-x-5 ml-4">
+        <button
+          onClick={() => {}}
+          className="bg-white border border-gray-300 px-3 py-1 rounded-full"
+        >
+          &gt;
+        </button>
+        <button
+          onClick={() => {}}
+          className="bg-white border border-gray-300 px-4 py-2 rounded-xl text-sm"
+        >
+          <FontAwesomeIcon icon={faList} className="mr-2" />
+          필터
+        </button>
+      </div>
     </div>
   );
 }
