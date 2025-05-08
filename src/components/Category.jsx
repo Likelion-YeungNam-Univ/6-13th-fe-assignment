@@ -13,15 +13,28 @@ const categoryList = [
   { id: 12, category: "호수 근처" },
   { id: 13, category: "키즈" },
 ];
+const handle = () => {};
 
 function Category() {
   return (
-    <div className="flex space-x-2 border-b border-gray-200 pb-2">
+    <div className="flex justify-center border-b border-gray-200 pb-2">
       {categoryList.map((category) => (
         <div id={category.id} className="bg-white px-4 py-2 text-sm rounded-lg">
           {category.category}
         </div>
       ))}
+      <button
+        onClick={() => {}}
+        className="bg-white border border-gray-300 px-3 rounded-full text"
+      >
+        &gt;
+      </button>
+      <button
+        onClick={() => {}}
+        className="bg-white border border-gray-300 px-4 py-2 rounded-lg text-sm"
+      >
+        필터
+      </button>
     </div>
   );
 }
